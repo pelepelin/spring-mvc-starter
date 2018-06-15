@@ -22,8 +22,16 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-web',
+            'org.springframework.boot:spring-boot-starter-jetty')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+dependencyManagement {
+	dependencies {
+		dependency('org.springframework.boot:spring-boot-starter-web:+') {
+			exclude 'org.springframework.boot:spring-boot-starter-tomcat'
+		}
+	}
 }
