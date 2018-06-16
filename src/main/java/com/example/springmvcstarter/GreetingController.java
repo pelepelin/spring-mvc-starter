@@ -12,11 +12,11 @@ public class GreetingController {
     @RequestMapping(path = "/", produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody
     public String greeting(
-        @RequestParam(value="name", required=false, defaultValue="World") String name
+            @RequestParam(value = "name", required = false, defaultValue = "World") String name
     ) {
         return String.format(
-            "<h1>Hello, %s</h1>",
-            name
+                "<h1>Hello, %s</h1>",
+                name
         );
     }
 }
