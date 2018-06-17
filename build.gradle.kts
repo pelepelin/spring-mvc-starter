@@ -1,5 +1,6 @@
 plugins {
     java
+    war
     id("org.springframework.boot") version "2.0.3.RELEASE"
     id("io.spring.dependency-management") version "1.0.5.RELEASE"
 }
@@ -19,7 +20,7 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-jetty")
+    providedRuntime("org.springframework.boot:spring-boot-starter-jetty")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
