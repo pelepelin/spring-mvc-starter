@@ -1,7 +1,11 @@
 plugins {
     id 'java'
-	id 'org.springframework.boot' version '2.0.3.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.5.RELEASE'
+    id 'org.springframework.boot' version '2.0.3.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.5.RELEASE'
+}
+
+ext {
+    springBootVersion = '2.0.3.RELEASE'
 }
 
 group = 'com.example'
@@ -9,19 +13,19 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web',
+    compile('org.springframework.boot:spring-boot-starter-web',
             'org.springframework.boot:spring-boot-starter-jetty')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 dependencyManagement {
-	dependencies {
-		dependency('org.springframework.boot:spring-boot-starter-web:+') {
-			exclude 'org.springframework.boot:spring-boot-starter-tomcat'
-		}
-	}
+    dependencies {
+        dependency("org.springframework.boot:spring-boot-starter-web:${springBootVersion}") {
+            exclude 'org.springframework.boot:spring-boot-starter-tomcat'
+        }
+    }
 }
