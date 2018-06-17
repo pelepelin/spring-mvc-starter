@@ -30,7 +30,7 @@ dependencies {
 
 dependencyManagement {
 	dependencies {
-		dependency('org.springframework.boot:spring-boot-starter-web:+') {
+		dependency("org.springframework.boot:spring-boot-starter-web:${springBootVersion}") {
 			exclude 'org.springframework.boot:spring-boot-starter-tomcat'
 		}
 	}
