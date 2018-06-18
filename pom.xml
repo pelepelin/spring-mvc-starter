@@ -6,7 +6,7 @@
   <groupId>com.example</groupId>
   <artifactId>spring-mvc-starter</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>spring-mvc-starter</name>
   <description>Demo project for Spring Boot</description>
@@ -39,6 +39,7 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-jetty</artifactId>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
