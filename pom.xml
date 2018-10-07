@@ -67,14 +67,6 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
           <version>${spring-boot.version}</version>
-          <executions>
-            <execution>
-              <goals>
-                <!-- Makes war executable -->
-                <goal>repackage</goal>
-              </goals>
-            </execution>
-          </executions>
         </plugin>
 
         <plugin>
@@ -88,6 +80,17 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <!--
+        spring-boot:run runs your Spring Boot application.
+        -->
+        <executions>
+          <execution>
+            <goals>
+              <!-- Makes war executable -->
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
