@@ -1,4 +1,4 @@
-package com.example.springmvcstarter;
+package com.example.springmvcstarterkotlin;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
